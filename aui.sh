@@ -10,9 +10,9 @@ pacstrap /mnt base base-devel
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
 # 下载chroot脚本
-wget 
+wget https://raw.githubusercontent.com/EvilWaWe/aui/master/after-chroot.sh 
 # Chroot配置
-arch-chroot /mnt /bin/bash -c "chmod u+x After-chroot.sh && ./after-chroot.sh"
+arch-chroot /mnt /bin/bash -c "chmod u+x after-chroot.sh && ./after-chroot.sh"
 
 # Umount all partitions
 umount -R /mnt
