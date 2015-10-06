@@ -12,7 +12,7 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 # 下载chroot脚本
 wget 
 # Chroot配置
-arch-chroot /mnt /bin/bash -c "chmod u+x After-chroot.sh && ./After-chroot.sh"
+arch-chroot /mnt /bin/bash -c "chmod u+x After-chroot.sh && ./after-chroot.sh"
 
 # Umount all partitions
 umount -R /mnt
